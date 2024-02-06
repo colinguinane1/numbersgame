@@ -1,14 +1,18 @@
+// lots and lots of variables
 var resultDisplay = document.getElementById("resultDisplay");
 var livesDisplay = document.getElementById("livesDisplay");
 var difficulty = document.getElementById("difficulty");
 var DifficultyLabel = document.getElementById("difficultyLabel");
 var showNum = document.getElementById("showNum");
 var cheatDisplay = document.getElementById("showNumDisplay")
+var title = document.getElementById("title");
 var generatedNumber;
 var attempt = 0;
 
+//initliase difficulty so its displayed as soon as the page is loaded
 difficultyDisplay();
 
+//displays difficulty value in the label
 function difficultyDisplay(){
    DifficultyLabel.textContent = difficulty.value;
    generateNumber();
@@ -18,6 +22,7 @@ function difficultyDisplay(){
    }
 }
 
+//generates a "random" number + checks if show number is checked
 function generateNumber(){
     generatedNumber = Math.floor(Math.random() * difficulty.value) + 1;
     if (showNum.checked){
@@ -26,6 +31,7 @@ function generateNumber(){
     return generatedNumber;
 }
 
+//show number cheat
 function showNumber(){
     if(showNum.checked){
         cheatDisplay.textContent = generatedNumber;
@@ -35,10 +41,14 @@ function showNumber(){
     }
 }
 
+
+//replays the game / reloads webpage
 function replay(){
     window.location.reload();
 }
 
+
+//creates number of lives based on difficulty
 function createLives(){
     max_attempt = Math.round(difficulty.value / 10);
     if (max_attempt >= 12){
@@ -51,7 +61,10 @@ function createLives(){
     return max_attempt;
 }
 
+// main function that runs the game and checks answer
 function main(){
+
+   title.textContent = "I'm thinking of a number between 1 and " + difficulty.value;
    var playerInput = document.getElementById("input").value;
    var currentAttempt = max_attempt - attempt;
    if(currentAttempt == 0){

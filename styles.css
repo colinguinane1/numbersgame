@@ -81,5 +81,6 @@ body{
 
 .author{
     font-family: Quicksand;
+    font-variant: small-caps;
     font-weight: 500;
 }
