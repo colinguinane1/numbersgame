@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Gamja+Flower&family=Nunito:ital,wght@0,200;0,300;0,400;1,200&family=Protest+Strike&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+  font-family: Protest Strike;
+  background: linear-gradient(132deg, rgb(141, 64, 77), rgb(122, 122, 255));
+  background-size: 400% 400%;
+  animation: Gradient 30s ease infinite;  
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes Gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.showNumCheat{
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    margin-top: 25%;
+    text-align: center;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    min-width: 300px;
+    max-width: 300px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+::placeholder{
+    color: black;
+    font-family: Protest Strike;
+    font-weight: 1;
+}
+
+.player-inputs input{
+    background-color: transparent;
+    outline: none;
+    border:none;
+    border-bottom: 1px solid black;
+    color: black;
+    transition: 0.3s ease;
+}
+
+.player-inputs input:hover{
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    padding: 8px;
+}
+
+.container button{
+    background-color: #fff;
+    border: none;
+    padding: 5px;
+    width: 100%;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.container button:hover{
+    background-color: black;
+    color: white;
+    font-size: larger;
+}
+
+.difficultyInfo{
+    font-family: Quicksand;
+    font-weight: 1;
+}
+
+.author{
+    font-family: Quicksand;
+    font-weight: 500;
+}
